@@ -47,7 +47,6 @@ public class Aspiradora {
         JOptionPane.showMessageDialog(null, "Configuración del sistema");
 
         //numero de habitaciones
-        
         //metros cuadrados
         String m2cocinas = JOptionPane.showInputDialog(null, "¿Cuantas m2 de cocinas hay?");
         double m2cocina = Double.parseDouble(m2cocinas);
@@ -62,7 +61,7 @@ public class Aspiradora {
         double m2baño = Double.parseDouble(m2baños);
 
         //nivel de carga
-       String baterias = JOptionPane.showInputDialog(null, "¿Cuanta bateria quieres establecer?");
+        String baterias = JOptionPane.showInputDialog(null, "¿Cuanta bateria quieres establecer?");
         double bateria = Double.parseDouble(baterias);
         //JOptionPane.showMessageDialog(null,"Batería al " +enteroAleatorio + "%");
 
@@ -87,27 +86,31 @@ public class Aspiradora {
 
                             JOptionPane.showMessageDialog(null, "limpiando habitaciones");
 
-                              double superficie = m2cocina*2.5;
-                            double bateriaZona= bateria - superficie ;
-                            
-                            if(bateriaZona<=3);{
-                            JOptionPane.showMessageDialog(null,"Esta parado en cocina, necesito cargar");
-                        }
-                            double superficie2 = m2baño*2.5;
-                            double bateriaZona1=(superficie2 + superficie) - bateria;
-                            if(bateriaZona1<=3);{
-                            JOptionPane.showMessageDialog(null,"Esta parado en baño, necesito cargar");
-                        }
-                            double superficie3 = m2salon*2.5;
-                            double bateriaZona2=(superficie3+superficie2 + superficie) - bateria;
-                            if(bateriaZona2<=3);{
-                            JOptionPane.showMessageDialog(null,"Esta parado en salon, necesito cargar");
-                        }
-                            double superficie4 = m2dormitorio*2.5;
-                            double bateriaZona3=(superficie4 + superficie3+superficie2 + superficie)- bateria;
-                            if(bateriaZona3<=3);{
-                            JOptionPane.showMessageDialog(null,"Esta parado en dormitorio, necesito cargar");
-                        }
+                            double superficie = m2cocina * 2.5;
+                            double bateriaZona = bateria - superficie;
+
+                            if (bateriaZona <= 3);
+                             {
+                                JOptionPane.showMessageDialog(null, "Esta parado en cocina, necesito cargar");
+                            }
+                            double superficie2 = m2baño * 2.5;
+                            double bateriaZona1 = (superficie2 + superficie) - bateria;
+                            if (bateriaZona1 <= 3);
+                             {
+                                JOptionPane.showMessageDialog(null, "Esta parado en baño, necesito cargar");
+                            }
+                            double superficie3 = m2salon * 2.5;
+                            double bateriaZona2 = (superficie3 + superficie2 + superficie) - bateria;
+                            if (bateriaZona2 <= 3);
+                             {
+                                JOptionPane.showMessageDialog(null, "Esta parado en salon, necesito cargar");
+                            }
+                            double superficie4 = m2dormitorio * 2.5;
+                            double bateriaZona3 = (superficie4 + superficie3 + superficie2 + superficie) - bateria;
+                            if (bateriaZona3 <= 3);
+                             {
+                                JOptionPane.showMessageDialog(null, "Esta parado en dormitorio, necesito cargar");
+                            }
                             break;
 
                         case "dependencias":
@@ -124,6 +127,12 @@ public class Aspiradora {
 
                                     } else {
                                         JOptionPane.showMessageDialog(null, "limpiando habitacion");
+                                        double sobrante = bateria - bateriass;
+                                        JOptionPane.showMessageDialog(null, "Me ha sobrado " + sobrante + "% de bateria");
+                                        if (sobrante <= 3);
+                                        {
+                                            JOptionPane.showMessageDialog(null, "necesito cargar");
+                                        }
 
                                     }
 
@@ -137,6 +146,12 @@ public class Aspiradora {
 
                                     } else {
                                         JOptionPane.showMessageDialog(null, "limpiando habitacion");
+                                        double sobrante = bateria - baterias2;
+                                        JOptionPane.showMessageDialog(null, "Me ha sobrado " + sobrante + "% de bateria");
+                                        if (sobrante <= 3);
+                                        {
+                                            JOptionPane.showMessageDialog(null, "necesito cargar");
+                                        }
                                     }
                                     break;
 
@@ -148,6 +163,12 @@ public class Aspiradora {
 
                                     } else {
                                         JOptionPane.showMessageDialog(null, "limpiando habitacion");
+                                        double sobrante = bateria - baterias3;
+                                        JOptionPane.showMessageDialog(null, "Me ha sobrado " + sobrante + "% de bateria");
+                                        if (sobrante <= 3);
+                                        {
+                                            JOptionPane.showMessageDialog(null, "necesito cargar");
+                                        }
                                     }
                                     break;
 
@@ -159,10 +180,16 @@ public class Aspiradora {
 
                                     } else {
                                         JOptionPane.showMessageDialog(null, "limpiando habitacion");
+                                        double sobrante = bateria - baterias4;
+                                        JOptionPane.showMessageDialog(null, "Me ha sobrado " + sobrante + "% de bateria");
+                                        if (sobrante <= 3);
+                                        {
+                                            JOptionPane.showMessageDialog(null, "necesito cargar");
+                                        }
                                     }
                                     break;
                             }
-                           JOptionPane.showMessageDialog(null, "Esta parado en: " + limpiar);
+                            JOptionPane.showMessageDialog(null, "Esta parado en: " + limpiar);
 
                             break;
                     }
@@ -178,28 +205,32 @@ public class Aspiradora {
                         case "Completo":
 
                             JOptionPane.showMessageDialog(null, "limpiando habitaciones");
+
+                            double superficie = m2cocina * 2.5;
+                            double bateriaZona = bateria - superficie;
+
+                            if (bateriaZona <= 3);
+                             
+                                JOptionPane.showMessageDialog(null, "Esta parado en cocina, necesito cargar");
                             
-                            double superficie = m2cocina*2.5;
-                            double bateriaZona= bateria - superficie ;
+                            double superficie2 = m2baño * 2.5;
+                            double bateriaZona1 = (superficie2 + superficie) - bateria;
+                            if (bateriaZona1 <= 3);
+                             
+                            JOptionPane.showMessageDialog(null, "Esta parado en baño, necesito cargar");
                             
-                            if(bateriaZona<=3);{
-                            JOptionPane.showMessageDialog(null,"Esta parado en cocina, necesito cargar");
-                        }
-                            double superficie2 = m2baño*2.5;
-                            double bateriaZona1=(superficie2 + superficie) - bateria;
-                            if(bateriaZona1<=3);{
-                            JOptionPane.showMessageDialog(null,"Esta parado en baño, necesito cargar");
-                        }
-                            double superficie3 = m2salon*2.5;
-                            double bateriaZona2=(superficie3+superficie2 + superficie) - bateria;
-                            if(bateriaZona2<=3);{
-                            JOptionPane.showMessageDialog(null,"Esta parado en salon, necesito cargar");
-                        }
-                            double superficie4 = m2dormitorio*2.5;
-                            double bateriaZona3=(superficie4 + superficie3+superficie2 + superficie)- bateria;
-                            if(bateriaZona3<=3);{
-                            JOptionPane.showMessageDialog(null,"Esta parado en dormitorio, necesito cargar");
-                        }
+                            double superficie3 = m2salon * 2.5;
+                            double bateriaZona2 = (superficie3 + superficie2 + superficie) - bateria;
+                            if (bateriaZona2 <= 3);
+                             
+                                JOptionPane.showMessageDialog(null, "Esta parado en salon, necesito cargar");
+                            
+                            double superficie4 = m2dormitorio * 2.5;
+                            double bateriaZona3 = (superficie4 + superficie3 + superficie2 + superficie) - bateria;
+                            if (bateriaZona3 <= 3);
+                             
+                                JOptionPane.showMessageDialog(null, "Esta parado en dormitorio, necesito cargar");
+                            
 
                             break;
 
@@ -217,7 +248,12 @@ public class Aspiradora {
 
                                     } else {
                                         JOptionPane.showMessageDialog(null, "limpiando habitacion");
-
+                                        double sobrante = bateria - bateriass;
+                                        JOptionPane.showMessageDialog(null, "Me ha sobrado " + sobrante + "% de bateria");
+                                        if (sobrante <= 3);
+                                        {
+                                            JOptionPane.showMessageDialog(null, "necesito cargar");
+                                        }
                                     }
 
                                     break;
@@ -230,6 +266,13 @@ public class Aspiradora {
 
                                     } else {
                                         JOptionPane.showMessageDialog(null, "limpiando habitacion");
+                                        double sobrante = bateria - baterias2;
+                                        JOptionPane.showMessageDialog(null, "Me ha sobrado " + sobrante + "% de bateria");
+                                        if (sobrante >= 3);
+                                        {
+                                            JOptionPane.showMessageDialog(null, "necesito cargar");
+                                        }
+
                                     }
                                     break;
 
@@ -241,6 +284,12 @@ public class Aspiradora {
 
                                     } else {
                                         JOptionPane.showMessageDialog(null, "limpiando habitacion");
+                                        double sobrante = bateria - baterias3;
+                                        JOptionPane.showMessageDialog(null, "Me ha sobrado " + sobrante + "% de bateria");
+                                        if (sobrante <= 3);
+                                        {
+                                            JOptionPane.showMessageDialog(null, "necesito cargar");
+                                        }
                                     }
                                     break;
 
@@ -252,10 +301,16 @@ public class Aspiradora {
 
                                     } else {
                                         JOptionPane.showMessageDialog(null, "limpiando habitacion");
+                                        double sobrante = bateria - baterias4;
+                                        JOptionPane.showMessageDialog(null, "Me ha sobrado " + sobrante + "% de bateria");
+                                        if (sobrante <= 3);
+                                        {
+                                            JOptionPane.showMessageDialog(null, "necesito cargar");
+                                        }
                                     }
                                     break;
                             }
-                           JOptionPane.showMessageDialog(null, "Esta parado en: " + limpiar);
+                            JOptionPane.showMessageDialog(null, "Esta parado en: " + limpiar);
 
                             break;
                     }
@@ -272,27 +327,26 @@ public class Aspiradora {
 
                     JOptionPane.showMessageDialog(null, "La bateria está al " + bateria + "%");
 
-                    JOptionPane.showMessageDialog(null, "Esta parado en " );
+                    JOptionPane.showMessageDialog(null, "Esta parado en ");
 
                     double superficie = m2baño + m2cocina + m2salon + m2dormitorio;
-                    
 
-                    JOptionPane.showMessageDialog(null, "Tiene 6 " + " habitaciones " + " con un total de " + superficie + " m2");
+                    JOptionPane.showMessageDialog(null, "Tiene 5 " + " habitaciones " + " con un total de " + superficie + " m2");
 
                     break;
-                    
-                case "Salir": int op = JOptionPane.showConfirmDialog(null,
-                    "¿Deseas salir?", "Salida del programa", JOptionPane.YES_NO_OPTION);
 
-                        // System.out.println("Opcion: " + op); // Depuración
-                        if (op == JOptionPane.YES_OPTION) {
+                case "Salir":
+                    int op = JOptionPane.showConfirmDialog(null,
+                            "¿Deseas salir?", "Salida del programa", JOptionPane.YES_NO_OPTION);
+
+                    // System.out.println("Opcion: " + op); // Depuración
+                    if (op == JOptionPane.YES_OPTION) {
                         // Quiere salir
                         JOptionPane.showMessageDialog(null, "Ha salido de la aplicación"); // Depuración
                         repetir = false; // Condición de parada del programa 
-                break;
-            }
+                        break;
+                    }
 
-            
             }
         } while (repetir);
 
