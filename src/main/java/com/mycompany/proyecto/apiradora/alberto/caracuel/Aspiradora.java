@@ -86,30 +86,29 @@ public class Aspiradora {
 
                             JOptionPane.showMessageDialog(null, "limpiando habitaciones");
 
-                            double superficie = m2cocina * 2.5;
+                            double superficie = m2cocina * 1.5;
                             double bateriaZona = bateria - superficie;
 
-                            if (bateriaZona <= 3);
-                             {
+                            double superficie2 = m2baño * 1.5;
+                            double bateriaZona1 = bateria - (superficie2 + superficie)  ;
+
+                            double superficie3 = m2salon * 1.5;
+                            double bateriaZona2 = bateria - (superficie3 + superficie2 + superficie) ;
+
+                            double superficie4 = m2dormitorio * 1.5;
+                            double bateriaZona3 = bateria - (superficie4 + superficie3 + superficie2 + superficie);
+
+                            if (bateriaZona <= 3) {
                                 JOptionPane.showMessageDialog(null, "Esta parado en cocina, necesito cargar");
-                            }
-                            double superficie2 = m2baño * 2.5;
-                            double bateriaZona1 = (superficie2 + superficie) - bateria;
-                            if (bateriaZona1 <= 3);
-                             {
+                            } else if (bateriaZona1 <= 3) {
                                 JOptionPane.showMessageDialog(null, "Esta parado en baño, necesito cargar");
-                            }
-                            double superficie3 = m2salon * 2.5;
-                            double bateriaZona2 = (superficie3 + superficie2 + superficie) - bateria;
-                            if (bateriaZona2 <= 3);
-                             {
+                            } else if (bateriaZona2 <= 3) {
                                 JOptionPane.showMessageDialog(null, "Esta parado en salon, necesito cargar");
-                            }
-                            double superficie4 = m2dormitorio * 2.5;
-                            double bateriaZona3 = (superficie4 + superficie3 + superficie2 + superficie) - bateria;
-                            if (bateriaZona3 <= 3);
-                             {
+                            } else if (bateriaZona3 <= 3) {
                                 JOptionPane.showMessageDialog(null, "Esta parado en dormitorio, necesito cargar");
+                            }else{
+                             JOptionPane.showMessageDialog(null, "Se han limpiado todas las habitaciones");
+
                             }
                             break;
 
@@ -206,31 +205,32 @@ public class Aspiradora {
 
                             JOptionPane.showMessageDialog(null, "limpiando habitaciones");
 
+                           JOptionPane.showMessageDialog(null, "limpiando habitaciones");
+
                             double superficie = m2cocina * 2.5;
                             double bateriaZona = bateria - superficie;
 
-                            if (bateriaZona <= 3);
-                             
-                                JOptionPane.showMessageDialog(null, "Esta parado en cocina, necesito cargar");
-                            
                             double superficie2 = m2baño * 2.5;
-                            double bateriaZona1 = (superficie2 + superficie) - bateria;
-                            if (bateriaZona1 <= 3);
-                             
-                            JOptionPane.showMessageDialog(null, "Esta parado en baño, necesito cargar");
-                            
+                            double bateriaZona1 = bateria - (superficie2 + superficie)  ;
+
                             double superficie3 = m2salon * 2.5;
-                            double bateriaZona2 = (superficie3 + superficie2 + superficie) - bateria;
-                            if (bateriaZona2 <= 3);
-                             
-                                JOptionPane.showMessageDialog(null, "Esta parado en salon, necesito cargar");
-                            
+                            double bateriaZona2 = bateria - (superficie3 + superficie2 + superficie) ;
+
                             double superficie4 = m2dormitorio * 2.5;
-                            double bateriaZona3 = (superficie4 + superficie3 + superficie2 + superficie) - bateria;
-                            if (bateriaZona3 <= 3);
-                             
+                            double bateriaZona3 = bateria - (superficie4 + superficie3 + superficie2 + superficie);
+
+                            if (bateriaZona <= 3) {
+                                JOptionPane.showMessageDialog(null, "Esta parado en cocina, necesito cargar");
+                            } else if (bateriaZona1 <= 3) {
+                                JOptionPane.showMessageDialog(null, "Esta parado en baño, necesito cargar");
+                            } else if (bateriaZona2 <= 3) {
+                                JOptionPane.showMessageDialog(null, "Esta parado en salon, necesito cargar");
+                            } else if (bateriaZona3 <= 3) {
                                 JOptionPane.showMessageDialog(null, "Esta parado en dormitorio, necesito cargar");
-                            
+                            }else{
+                             JOptionPane.showMessageDialog(null, "Se han limpiado todas las habitaciones");
+
+                            }
 
                             break;
 
