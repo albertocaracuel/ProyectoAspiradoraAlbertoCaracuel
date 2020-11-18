@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.proyecto.apiradora.alberto.caracuel;
+package programaa;
 //importación de todo lo que voy a necesitar para el proyecto
 
 import java.text.DateFormat;
@@ -34,8 +34,7 @@ public class Aspiradora {
         //le digo q se rregistre con JOptionPane
         String regusuario = JOptionPane.showInputDialog(null, "Crea tu nombre de usuario");
 
-        String regcontraseña = JOptionPane.showInputDialog(null, "A continuación introduzca la contraseña\n"
-                + "Tenga en cuenta que la contraseña solo puede tener letras");
+        String regcontraseña = JOptionPane.showInputDialog(null, "A continuación introduzca la contraseña");
         String contraseña1;
         String usuario1;
         //utilizo un do while para que hasta q no coincidan los daatos del registro con los de inicio de sesion no de el siguiente paso
@@ -77,7 +76,7 @@ public class Aspiradora {
             //opciones a elegir
             String funcionamiento = JOptionPane.showInputDialog(null, "Modos a elegir\n"
                     + "Aspiracion\n"
-                    + "Aspiracion y fregado\n"
+                    + "Aspiracion y Fregado\n"
                     + "Estado general\n"
                     + "Salir");
             //despliego un switch para que el usuario eliga una de las opciones del menu
@@ -87,7 +86,7 @@ public class Aspiradora {
 
                     String modo = JOptionPane.showInputDialog(null, "Modos a elegir\n"
                             + "Completo\n"
-                            + "dependencias");
+                            + "Dependencias");
                     //DESPLIEGUE DE TODOS LOS MODOS DE LA OPCION ASPIRACIÓN
                     //despliego un switch para que el usuario eliga una de las opciones del menu
 
@@ -122,12 +121,12 @@ public class Aspiradora {
                             }
                             break;
 
-                        case "dependencias":
+                        case "Dependencias":
                             //pregunto que quiere limpiar
                             limpiar = JOptionPane.showInputDialog(null, "Que habitacion quiere limpiar");
 
                             switch (limpiar) {
-                                case "cocina":
+                                case "Cocina":
                                     //inicio y declaro variables para que me diga los metros por bateria
                                     double bateriass = (m2cocina * 100) / 15;
                                     //utilizo un if para q diga lo q corresponde
@@ -135,18 +134,18 @@ public class Aspiradora {
                                         JOptionPane.showMessageDialog(null, "Necesita cargar");
 
                                     } else {
-                                        JOptionPane.showMessageDialog(null, "limpiando habitacion");
+                                        JOptionPane.showMessageDialog(null, "Limpiando habitacion");
                                         sobrante = bateria - bateriass;
                                         JOptionPane.showMessageDialog(null, "Me ha sobrado " + sobrante + "% de bateria");
                                         if (sobrante <= 3) {
-                                            JOptionPane.showMessageDialog(null, "necesito cargar");
+                                            JOptionPane.showMessageDialog(null, "Necesito cargar");
                                         }
 
                                     }
 
                                     break;
 
-                                case "baño":
+                                case "Baño":
                                     //inicio y declaro variables para que me diga los metros por bateria
 
                                     double baterias2 = (m2baño * 100) / 15;
@@ -156,16 +155,16 @@ public class Aspiradora {
                                         JOptionPane.showMessageDialog(null, "Necesita cargar");
 
                                     } else {
-                                        JOptionPane.showMessageDialog(null, "limpiando habitacion");
+                                        JOptionPane.showMessageDialog(null, "Limpiando habitacion");
                                         sobrante = bateria - baterias2;
                                         JOptionPane.showMessageDialog(null, "Me ha sobrado " + sobrante + "% de bateria");
                                         if (sobrante <= 3) {
-                                            JOptionPane.showMessageDialog(null, "necesito cargar");
+                                            JOptionPane.showMessageDialog(null, "Necesito cargar");
                                         }
                                     }
                                     break;
 
-                                case "salon":
+                                case "Salon":
                                     //inicio y declaro variables para que me diga los metros por bateria
 
                                     double baterias3 = (m2salon * 100) / 15;
@@ -175,16 +174,16 @@ public class Aspiradora {
                                         JOptionPane.showMessageDialog(null, "Necesita cargar");
 
                                     } else {
-                                        JOptionPane.showMessageDialog(null, "limpiando habitacion");
+                                        JOptionPane.showMessageDialog(null, "Limpiando habitacion");
                                         sobrante = bateria - baterias3;
                                         JOptionPane.showMessageDialog(null, "Me ha sobrado " + sobrante + "% de bateria");
                                         if (sobrante <= 3) {
-                                            JOptionPane.showMessageDialog(null, "necesito cargar");
+                                            JOptionPane.showMessageDialog(null, "Necesito cargar");
                                         }
                                     }
                                     break;
 
-                                case "dormitorio":
+                                case "Dormitorio":
                                     //inicio y declaro variables para que me diga los metros por bateria
 
                                     double baterias4 = (m2dormitorio * 100) / 15;
@@ -194,11 +193,11 @@ public class Aspiradora {
                                         JOptionPane.showMessageDialog(null, "Necesita cargar");
 
                                     } else {
-                                        JOptionPane.showMessageDialog(null, "limpiando habitacion");
+                                        JOptionPane.showMessageDialog(null, "Limpiando habitacion");
                                         sobrante = bateria - baterias4;
                                         JOptionPane.showMessageDialog(null, "Me ha sobrado " + sobrante + "% de bateria");
                                         if (sobrante <= 3) {
-                                            JOptionPane.showMessageDialog(null, "necesito cargar");
+                                            JOptionPane.showMessageDialog(null, "Necesito cargar");
                                         }
                                     }
                                     break;
@@ -214,7 +213,7 @@ public class Aspiradora {
                 case "Aspiracion y fregado":
                     String modo1 = JOptionPane.showInputDialog(null, "Modos a elegir\n"
                             + "Completo\n"
-                            + "dependencias");
+                            + "Dependencias");
                     //despliego un switch para que el usuario eliga una de las opciones del menu
 
                     switch (modo1) {
@@ -252,12 +251,12 @@ public class Aspiradora {
 
                             break;
 
-                        case "dependencias":
+                        case "Dependencias":
                             //pregunto que quiere limpiar
                             limpiar = JOptionPane.showInputDialog(null, "Que habitacion quiere limpiar");
 
                             switch (limpiar) {
-                                case "cocina":
+                                case "Cocina":
                                     //inicio y declaro variables para que me diga los metros por bateria
 
                                     double bateriass = (m2cocina * 100) / 25;
@@ -267,17 +266,17 @@ public class Aspiradora {
                                         JOptionPane.showMessageDialog(null, "Necesita cargar");
 
                                     } else {
-                                        JOptionPane.showMessageDialog(null, "limpiando habitacion");
+                                        JOptionPane.showMessageDialog(null, "Limpiando habitacion");
                                         sobrante = bateria - bateriass;
                                         JOptionPane.showMessageDialog(null, "Me ha sobrado " + sobrante + "% de bateria");
                                         if (sobrante <= 3) {
-                                            JOptionPane.showMessageDialog(null, "necesito cargar");
+                                            JOptionPane.showMessageDialog(null, "Necesito cargar");
                                         }
                                     }
 
                                     break;
 
-                                case "baño":
+                                case "Baño":
                                      //inicio y declaro variables para que me diga los metros por bateria
 
                                     double baterias2 = (m2baño * 100) / 25;
@@ -287,17 +286,17 @@ public class Aspiradora {
                                         JOptionPane.showMessageDialog(null, "Necesita cargar");
 
                                     } else {
-                                        JOptionPane.showMessageDialog(null, "limpiando habitacion");
+                                        JOptionPane.showMessageDialog(null, "Limpiando habitacion");
                                         sobrante = bateria - baterias2;
                                         JOptionPane.showMessageDialog(null, "Me ha sobrado " + sobrante + "% de bateria");
-                                        if (sobrante >= 3) {
-                                            JOptionPane.showMessageDialog(null, "necesito cargar");
+                                        if (sobrante <= 3) {
+                                            JOptionPane.showMessageDialog(null, "Necesito cargar");
                                         }
 
                                     }
                                     break;
 
-                                case "salon":
+                                case "Salon":
                                     //inicio y declaro variables para que me diga los metros por bateria
 
                                     double baterias3 = (m2salon * 100) / 25;
@@ -307,16 +306,16 @@ public class Aspiradora {
                                         JOptionPane.showMessageDialog(null, "Necesita cargar");
 
                                     } else {
-                                        JOptionPane.showMessageDialog(null, "limpiando habitacion");
+                                        JOptionPane.showMessageDialog(null, "Limpiando habitacion");
                                         sobrante = bateria - baterias3;
                                         JOptionPane.showMessageDialog(null, "Me ha sobrado " + sobrante + "% de bateria");
                                         if (sobrante <= 3) {
-                                            JOptionPane.showMessageDialog(null, "necesito cargar");
+                                            JOptionPane.showMessageDialog(null, "Necesito cargar");
                                         }
                                     }
                                     break;
 
-                                case "dormitorio":
+                                case "Dormitorio":
                                     //inicio y declaro variables para que me diga los metros por bateria
 
                                     double baterias4 = (m2dormitorio * 100) / 25;
@@ -326,11 +325,11 @@ public class Aspiradora {
                                         JOptionPane.showMessageDialog(null, "Necesita cargar ");
 
                                     } else {
-                                        JOptionPane.showMessageDialog(null, "limpiando habitacion");
+                                        JOptionPane.showMessageDialog(null, "Limpiando habitacion");
                                         sobrante = bateria - baterias4;
                                         JOptionPane.showMessageDialog(null, "Me ha sobrado " + sobrante + "% de bateria");
                                         if (sobrante <= 3) {
-                                            JOptionPane.showMessageDialog(null, "necesito cargar");
+                                            JOptionPane.showMessageDialog(null, "Necesito cargar");
                                         }
                                     }
                                     break;
